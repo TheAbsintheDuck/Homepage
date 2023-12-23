@@ -1,18 +1,18 @@
 html {
     width: 80%;
-    justify-content: center;
     margin: auto;
     background-color: #062925;
+    color: #b8e1dd;
 }
-
-
 
 h1 {
     font-size: 100px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
+h2 {
+    color: black;
+}
 
 #header {
     grid-area: header;
@@ -41,32 +41,48 @@ h1 {
 
 #cv {
     grid-area: cv;
-    align-items: center;
-    background-color: #3a9188;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
 
 #portfolio {
     grid-area: portfolio;
-    background-color: #3a9188;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+#cv,
+#portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #3a9188;
+}
+
+#cv ul,
+#portfolio ul {
+    text-align: center;
+    padding: 0;
+}
+
+#cv li,
+#portfolio li {
+    margin: 5px;
+    list-style: none;
 }
 
 #contact {
     grid-area: footer;
     background-color: #044a42;
-    margin-bottom: 10px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+    color: #b8e1dd;
 }
 
-#about p,
-#cv li,
 #contact a,
-#portfolio a,
-#portfolio p {
+#portfolio a {
     color: #b8e1dd;
 }
 
@@ -86,36 +102,6 @@ h1 {
     padding: 20px;
     font-size: 24PX;
 }
-
-#cv,
-#portfolio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-#cv ul,
-#portfolio ul {
-  text-align: center;
-  padding: 0;
-}
-
-#cv li,
-#portfolio li {
-  margin: 5px;
-  list-style: none;
-}
-
-#cv,
-#portfolio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-sizing: border-box;
-}
-
 
 @media (max-width: 768px) {
     .container {
@@ -139,6 +125,13 @@ h1 {
         border-top-right-radius: 0px;
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
+    }
 
+    h1 {
+        font-size: 80px;
+    }
+
+    html {
+        width: 100%;
     }
 }
